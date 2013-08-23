@@ -1,0 +1,23 @@
+{
+  "name": "flex.checkall",
+  "version": "0.1.0",
+  "description": "Check all checkboxes",
+  "main": "Gruntfile.js",
+  "homepage": "http://github.com/suciuvlad/flex.checkall/",
+  "dependencies": {
+    "grunt": "~0.4.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-jshint": "~0.5.4",
+    "grunt-contrib-compass": "~0.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Vlad Suciu",
+  "license": "MIT"
+}
