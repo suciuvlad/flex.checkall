@@ -28,6 +28,10 @@ module.exports = function(grunt) {
       dist: {
         src: '<%= concat.dist.dest %>',
         dest: 'lib/<%= pkg.name %>.min.js'
+      },
+      amd: {
+        src: '<%= rig.amd.dest %>',
+        dest: 'lib/amd/<%= pkg.name %>.min.js'
       }
     },
     rig: {
