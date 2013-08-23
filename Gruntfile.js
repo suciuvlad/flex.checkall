@@ -28,6 +28,19 @@ module.exports = function(grunt) {
       dist: {
         src: '<%= concat.dist.dest %>',
         dest: 'lib/<%= pkg.name %>.min.js'
+      },
+      amd: {
+        src: '<%= rig.amd.dest %>',
+        dest: 'lib/amd/<%= pkg.name %>.min.js'
+      }
+    },
+    rig: {
+      amd: {
+        options: {
+          banner: '<%= banner %>'
+        },
+        src: ['src/amd.js'],
+        dest: 'lib/amd/flex.checkall.js'
       }
     },
     jshint: {
@@ -71,9 +84,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-rigger');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'compass']);
+  grunt.registerTask('default', ['jshint', 'concat', 'rig', 'uglify', 'compass']);
 
 };
 
