@@ -34,11 +34,8 @@ Flex.Checkall = (function ($) {
   Checkall.prototype._setupBindings = function () {
     var self = this;
 
-    this.$elem.on('click', function () {
+    this.$elem.on('change', function () {
       self.$container.find(':checkbox').prop('checked', this.checked).change();
-    });
-
-    self.$elem.on('change', function () {
       self.options.onTriggerChange.call(this);
     });
 
